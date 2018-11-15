@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.risk.controller.service.dao.RobotResultDao">
+    <resultMap id="getMap" type="com.risk.controller.service.entity.RobotResult">
+    </resultMap>
+
+    <insert id="insert" parameterType="com.risk.controller.service.entity.RobotResult"  useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+        INSERT INTO `zx_risk`.`risk_robot_result`
+        (`nid`, `num`, `result`, `source`, `add_time`, `update_time`)
+        VALUES
+        ( #{nid}, #{num}, #{result}, #{source}, SYSDATE(),SYSDATE());
+    </insert>
+</mapper>
